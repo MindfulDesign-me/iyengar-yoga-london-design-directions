@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Iyengar Yoga London Design Directions</title>
+<meta name="description" content="Three homepage design directions for Iyengar Yoga London, from Mindful Design.">
+<link rel="icon" href="assets/img/logo.svg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+/* A quiet studio folio: cover, what we heard, three direction chapters with live previews,
+   the shared booking journey, a comparison and next steps. Neutral, so the directions carry the colour. */
+:root {
+  --bg: #F6F4EF; --bg-2: #ECE9E2; --card: #FFFFFF; --fg: #1D1B18; --fg-soft: #5B5650; --line: #DAD5CC;
+  --accent: #A13A0B; --frame: #2A2724;
+  --font: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 14px; --shadow: 0 1px 1px rgba(40, 30, 20, .04), 0 12px 32px -12px rgba(40, 30, 20, .18);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #161513; --bg-2: #1F1D1B; --card: #242220; --fg: #EFECE6; --fg-soft: #ABA59B; --line: #37342F; --accent: #F0915C; --frame: #0E0D0C; --shadow: 0 1px 1px rgba(0,0,0,.3), 0 16px 40px -16px rgba(0,0,0,.6); color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #161513; --bg-2: #1F1D1B; --card: #242220; --fg: #EFECE6; --fg-soft: #ABA59B; --line: #37342F; --accent: #F0915C; --frame: #0E0D0C; color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--card); }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
+@media (min-width: 720px) { .wrap { padding-inline: max(32px, env(safe-area-inset-left, 0px)); } }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-soft); }
+h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 600; letter-spacing: -.02em; line-height: 1.08; }
+p { text-wrap: pretty; margin: 0; }
+
+.bar { position: sticky; top: 0; z-index: 20; background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+.bar b { font-weight: 600; font-size: 14px; white-space: nowrap; }
+.bar nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.bar nav::-webkit-scrollbar { display: none; }
+.bar nav a { text-decoration: none; font-size: 14px; color: var(--fg-soft); padding: 6px 10px; border-radius: 999px; white-space: nowrap; transition: background-color .15s, color .15s; }
+.bar nav a:hover { background: var(--bg-2); color: var(--fg); }
+@media (max-width: 640px) { .bar b span { display: none; } }
+
+.cover { padding-block: clamp(56px, 10vw, 120px) clamp(40px, 6vw, 72px); }
+.cover h1 { font-size: clamp(2.5rem, 6.2vw, 5rem); max-width: 15ch; letter-spacing: -.035em; line-height: .98; }
+.cover .lede { margin-top: 24px; font-size: clamp(1.08rem, 1.6vw, 1.28rem); color: var(--fg-soft); max-width: 62ch; }
+.cover .lede + .lede { margin-top: 14px; }
+.cover .meta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px 32px; }
+.cover .meta div { display: grid; gap: 2px; }
+.cover .meta strong { font-weight: 500; font-size: 15px; }
+
+.brief { padding-block: 8px clamp(56px, 8vw, 96px); }
+.grid4 { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid4 > div { background: var(--card); padding: 22px 24px; display: grid; gap: 8px; align-content: start; }
+.grid4 h3 { font-size: 1.08rem; letter-spacing: -.01em; }
+.grid4 p { color: var(--fg-soft); font-size: 15px; }
+.grid4 .used { font-size: 13px; color: var(--accent); font-weight: 500; }
+@media (max-width: 1000px) { .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid4 { grid-template-columns: minmax(0, 1fr); } }
+
+.block { padding-block: 0 clamp(64px, 9vw, 112px); }
+.section-head { display: grid; gap: 10px; margin-bottom: 28px; max-width: 62ch; }
+.section-head h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+.section-head p { color: var(--fg-soft); }
+.tiles { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.tile { display: grid; gap: 14px; text-decoration: none; color: inherit; }
+.tile .shot { aspect-ratio: 16 / 10; border-radius: var(--r); overflow: hidden; background: var(--bg-2); box-shadow: var(--shadow); }
+.tile .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s cubic-bezier(.23, 1, .32, 1); }
+@media (hover: hover) and (pointer: fine) { .tile:hover .shot img { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { .tile .shot img { transition: none; } .tile:hover .shot img { transform: none; } }
+.tile .t-row { display: flex; align-items: baseline; gap: 12px; }
+.tile .letter { font-family: var(--mono); font-size: 13px; color: var(--fg-soft); }
+.tile h3 { font-size: 1.45rem; }
+.tile p { color: var(--fg-soft); font-size: 15px; }
+
+.journey { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: clamp(22px, 4vw, 44px); display: grid; gap: 28px; }
+@media (min-width: 960px) { .journey { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; } }
+.journey h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.journey > div > p { color: var(--fg-soft); margin-top: 14px; }
+.steps3 { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.steps3 li { display: grid; grid-template-columns: 40px 1fr; gap: 4px 14px; padding: 16px 0; border-top: 1px solid var(--line); }
+.steps3 li:first-child { border-top: 0; padding-top: 0; }
+.steps3 li::before { counter-increment: s; content: counter(s); grid-row: span 2; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--fg); color: var(--bg); font: 600 14px var(--mono); }
+.steps3 b { font-weight: 600; }
+.steps3 span { color: var(--fg-soft); font-size: 15px; }
+
+.dir { padding-block: clamp(64px, 9vw, 112px); border-top: 1px solid var(--line); }
+.dir-head { display: grid; gap: 28px; margin-bottom: 36px; }
+@media (min-width: 960px) { .dir-head { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: end; } }
+.dir-head h2 { font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -.035em; margin-top: 10px; }
+.dir-head .tag { margin-top: 14px; font-size: clamp(1.05rem, 1.5vw, 1.2rem); color: var(--fg-soft); max-width: 50ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.chips span { font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg-soft); }
+.specimen { display: grid; gap: 16px; }
+.swatches { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+.swatches div { aspect-ratio: 1 / 1.15; padding: 8px; display: flex; align-items: flex-end; }
+.swatches code { font-family: var(--mono); font-size: 10.5px; letter-spacing: .02em; }
+@media (max-width: 520px) { .swatches code { font-size: 8.5px; } }
+.typo { display: flex; gap: 18px; align-items: baseline; flex-wrap: wrap; padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.typo .aa { font-size: 44px; line-height: 1; }
+.typo .names { display: grid; gap: 2px; font-size: 14px; color: var(--fg-soft); }
+.typo .names strong { color: var(--fg); font-weight: 500; }
+.dir-body { display: grid; gap: 36px; }
+@media (min-width: 1100px) { .dir-body { grid-template-columns: 300px minmax(0, 1fr); } }
+.notes { display: grid; gap: 22px; align-content: start; }
+.notes h3 { font-size: 1rem; letter-spacing: 0; margin-bottom: 4px; }
+.notes p { color: var(--fg-soft); font-size: 15px; }
+
+.preview { min-width: 0; }
+.pv-tools { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--bg-2); border-radius: 999px; }
+.seg button { font: inherit; font-size: 14px; border: 0; background: transparent; color: var(--fg-soft); padding: 7px 14px; min-height: 36px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--card); color: var(--fg); box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+.open-link { font-size: 14px; color: var(--accent); text-decoration: none; white-space: nowrap; font-weight: 500; }
+.open-link:hover { text-decoration: underline; }
+.frame { background: var(--frame); border-radius: 16px; padding: 10px; box-shadow: var(--shadow); }
+.frame .chrome { display: flex; gap: 6px; padding: 2px 6px 10px; align-items: center; }
+.frame .chrome i { width: 10px; height: 10px; border-radius: 50%; background: #4a4642; display: block; }
+.frame .chrome span { margin-left: 10px; font-family: var(--mono); font-size: 11px; color: #A8A197; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viewport { position: relative; overflow: hidden; border-radius: 8px; background: #fff; }
+.viewport iframe { border: 0; display: block; transform-origin: 0 0; background: #fff; }
+.frame.mobile { width: min(100%, 360px); margin: 0 auto; border-radius: 40px; padding: 12px; }
+.frame.mobile .chrome { justify-content: center; padding-bottom: 8px; }
+.frame.mobile .chrome i { display: none; }
+.frame.mobile .chrome span { margin: 0; }
+.frame.mobile .viewport { border-radius: 28px; }
+.pv-hint { margin-top: 10px; font-size: 13px; color: var(--fg-soft); }
+
+.compare, .shared, .next { padding-block: clamp(64px, 9vw, 112px); border-top: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--card); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+tr:last-child td, tr:last-child th { border-bottom: 0; }
+thead th { font-weight: 600; background: var(--bg-2); }
+tbody th { font-weight: 500; color: var(--fg-soft); width: 18%; }
+.dots { letter-spacing: 2px; font-family: var(--mono); }
+.shared-grid { display: grid; gap: 28px 40px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.shared-grid h3 { font-size: 1.1rem; margin-bottom: 6px; letter-spacing: -.01em; }
+.shared-grid p { color: var(--fg-soft); font-size: 15px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.steps li { background: var(--card); padding: 24px; display: grid; gap: 8px; align-content: start; }
+.steps .n { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.steps h3 { font-size: 1.15rem; }
+.steps p { color: var(--fg-soft); font-size: 15px; }
+@media (max-width: 760px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+footer { padding-block: 40px 56px; color: var(--fg-soft); font-size: 14px; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <b>iyengaryogalondon.co.uk <span>· Design directions</span></b>
+    <nav aria-label="Sections">
+      <a href="#heard">What we heard</a>
+      <a href="#journey">Booking</a>
+      <a href="#alignment">A Alignment</a>
+      <a href="#practice">B Practice</a>
+      <a href="#lineage">C Lineage</a>
+      <a href="#compare">Compare</a>
+      <a href="#research">Research</a>
+      <a href="#next">Next steps</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="cover">
+    <div class="wrap">
+      <p class="label">For Iyengar Yoga London · Maida Vale</p>
+      <h1 style="margin-top:18px">Three directions for the original London home of Iyengar yoga</h1>
+      <p class="lede">We are Mindful Design, a small, values-led team from contemplative traditions. We build websites for Dharma centres and, more and more, for yoga communities. We spent time with your site, your timetable and your history, and imagined three ways your homepage could feel.</p>
+      <p class="lede">This is an invitation rather than a critique. Every page is built and clickable, uses your own words and photographs, and shows your real programme for this week.</p>
+      <div class="meta">
+        <div><span class="label">Prepared</span><strong>28 October 2026</strong></div>
+        <div><span class="label">Each direction</span><strong>A full homepage, desktop and phone</strong></div>
+        <div><span class="label">Content</span><strong>Live timetable and workshops, 28 Oct to 3 Nov</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brief" id="heard">
+    <div class="wrap">
+      <div class="grid4">
+        <div><span class="label">Keep</span><h3>One method, taught with care</h3><p>Safety, detail, precision and alignment are already how you describe yourselves. Each direction expresses that in its own way: in typography, in a booking flow, in a held pose.</p></div>
+        <div><span class="label">Keep</span><h3>Your lineage</h3><p>B.K.S. Iyengar helped found the Institute and taught here. That story, and your charity status, deserve a place on the homepage, not three clicks away.</p></div>
+        <div><span class="label">Bring together</span><h3>One way to book</h3><p>Classes, livestreams, workshops, tasters and the beginners course share one timetable and one booking sheet in every direction.</p></div>
+        <div><span class="label">Welcome</span><h3>A clear first step</h3><p>Free tasters and the six-week course sit close to the top, with prices and concessions stated plainly, in keeping with your inclusion policy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="overview">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The three directions at a glance</h2>
+        <p>Each one has a different palette, typography, layout and scroll behaviour, and each carries the same content: your institute and method, this week’s timetable, workshops, livestreams, first steps, membership, teacher training, newsletter and footer.</p>
+      </div>
+      <div class="tiles">
+        <a class="tile" href="#alignment">
+          <div class="shot"><img src="assets/shots/a-home.jpg" alt="Direction A homepage: a serif headline on warm paper beside a photograph of the main studio" loading="lazy" width="1440" height="900"></div>
+          <div class="t-row"><span class="letter">A</span><h3>Alignment</h3></div>
+          <p>A printed programme. Warm paper, a fine serif, and photographs that straighten as you scroll.</p>
+        </a>
+        <a class="tile" href="#practice">
+          <div class="shot"><img src="assets/shots/b-home.jpg" alt="Direction B homepage: a bold sans headline, a level selector and an up-next booking card over a class photo" loading="lazy" width="1440" height="900"></div>
+          <div class="t-row"><span class="letter">B</span><h3>Practice</h3></div>
+          <p>Booking first. Calm, app-like, and shaped around how long you have practised.</p>
+        </a>
+        <a class="tile" href="#lineage">
+          <div class="shot"><img src="assets/shots/c-home.jpg" alt="Direction C homepage: B.K.S. Iyengar at the Barbican in 1984 behind a wide uppercase headline" loading="lazy" width="1440" height="900"></div>
+          <div class="t-row"><span class="letter">C</span><h3>Lineage</h3></div>
+          <p>Dark and photographic. 1984 dissolves into today, and a pose is held for a minute.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="journey">
+    <div class="wrap">
+      <div class="journey">
+        <div>
+          <p class="label">In all three directions</p>
+          <h2 style="margin-top:10px">One booking journey for everything</h2>
+          <p>Today your timetable, class booking and workshop booking live in separate places. In each direction, every “Book” button opens the same sheet: a bottom sheet on phones, a side panel on larger screens, styled to match. It would run on the booking system you already use, so memberships, Yogapasses and the Iyengar Yoga London app carry on working as they do now.</p>
+          <p>Try it on any class, livestream, workshop, free taster or the Yogapass buttons. Nothing is booked or paid in these prototypes.</p>
+        </div>
+        <ol class="steps3">
+          <li><b>Choose</b><span>What, when and with whom, the level it suits, and studio or livestream for hybrid sessions. Member, visitor or Yogapass, with prices side by side.</span></li>
+          <li><b>Confirm</b><span>A short summary and one clear button. Studio regulars are reminded they can simply drop in; livestreamers see when the Zoom link arrives.</span></li>
+          <li><b>Booked</b><span>What to bring or how to join, and an “Add to calendar” file. A full taster offers the next dates or a waiting list; Remedial becomes a short application.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- A -->
+  <section class="dir" id="alignment">
+    <div class="wrap">
+      <div class="dir-head">
+        <div>
+          <p class="label">Direction A · Editorial</p>
+          <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.02em">Alignment</h2>
+          <p class="tag">The homepage as a well-made printed programme, in chapters: the Institute, the method, this week, beginning, workshops, online, prices and teachers. Quiet, exact and unhurried.</p>
+          <div class="chips"><span>Precise</span><span>Literary</span><span>Calm</span><span>Timeless</span></div>
+        </div>
+        <div class="specimen">
+          <div class="swatches">
+            <div style="background:#F5F1E8;color:#1E1A15"><code>#F5F1E8</code></div>
+            <div style="background:#ECE5D7;color:#1E1A15"><code>#ECE5D7</code></div>
+            <div style="background:#1E1A15;color:#F5F1E8"><code>#1E1A15</code></div>
+            <div style="background:#564E44;color:#FFFFFF"><code>#564E44</code></div>
+            <div style="background:#A13A0B;color:#FFFFFF"><code>#A13A0B</code></div>
+            <div style="background:#3C5266;color:#FFFFFF"><code>#3C5266</code></div>
+          </div>
+          <div class="typo">
+            <span class="aa" style="font-family:'Instrument Serif',Georgia,serif">Aa</span>
+            <span class="aa" style="font-family:'Geist',sans-serif;font-size:34px">Aa</span>
+            <div class="names"><strong>Instrument Serif</strong><span>headings · Geist for reading</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="dir-body">
+        <div class="notes">
+          <div><h3>Why</h3><p>Iyengar yoga is careful, systematic and deeply studied. An editorial page, with chapters, rules and a fine serif, says the same thing before anyone reads a word.</p></div>
+          <div><h3>Signature: the adjustment</h3><p>Photographs arrive a few degrees off true, with a fine plumb line and an angle reading. As you scroll they settle exactly onto the line, the way a teacher’s correction brings a pose into alignment.</p></div>
+          <div><h3>Booking</h3><p>Today’s classes in one running line under the title, then a week of dates set like a printed timetable, with filters for studio, livestream and level.</p></div>
+          <div><h3>Best if</h3><p>You want the site to feel like the Institute: considered, authoritative and welcoming, with nothing loud.</p></div>
+        </div>
+        <div class="preview" data-dir="a"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="dir" id="practice">
+    <div class="wrap">
+      <div class="dir-head">
+        <div>
+          <p class="label">Direction B · Booking first</p>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:-.045em">Practice</h2>
+          <p class="tag">Calm and app-like, built around one question: what can I come to? The timetable is the hero, and the page reshapes itself around your experience.</p>
+          <div class="chips"><span>Clear</span><span>Friendly</span><span>Practical</span><span>Mobile first</span></div>
+        </div>
+        <div class="specimen">
+          <div class="swatches">
+            <div style="background:#F7F6F2;color:#18222D"><code>#F7F6F2</code></div>
+            <div style="background:#FFFFFF;color:#18222D"><code>#FFFFFF</code></div>
+            <div style="background:#18222D;color:#FFFFFF"><code>#18222D</code></div>
+            <div style="background:#C2410C;color:#FFFFFF"><code>#C2410C</code></div>
+            <div style="background:#2D6A57;color:#FFFFFF"><code>#2D6A57</code></div>
+            <div style="background:#FCEDE3;color:#18222D"><code>#FCEDE3</code></div>
+          </div>
+          <div class="typo">
+            <span class="aa" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;letter-spacing:-.03em">Aa</span>
+            <span class="aa" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:34px">Aa</span>
+            <div class="names"><strong>Plus Jakarta Sans</strong><span>one family, headings and text</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="dir-body">
+        <div class="notes">
+          <div><h3>Why</h3><p>Most visitors arrive on a phone wanting to know what is on, whether it suits them, and how to book. B answers all three on the first screen.</p></div>
+          <div><h3>Signature: find your level</h3><p>“How long have you practised Iyengar yoga?” One tap filters the timetable, the up-next card, the workshops and a set of personal next steps, from a free taster to the Twixtmas Intensive.</p></div>
+          <div><h3>Booking</h3><p>A day strip with a sticky filter bar, class cards with prices, workshop carousel, and a mobile tab bar for Timetable, Workshops, Online and Prices.</p></div>
+          <div><h3>Best if</h3><p>Growing classes and membership is the priority, and you want the site to work as smoothly as your app.</p></div>
+        </div>
+        <div class="preview" data-dir="b"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="dir" id="lineage">
+    <div class="wrap">
+      <div class="dir-head">
+        <div>
+          <p class="label">Direction C · Cinematic</p>
+          <h2 style="font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:-.01em">Lineage</h2>
+          <p class="tag">Dark, photographic and archival. It opens in May 1984 at the Barbican and dissolves into a class at the rope wall today, then lets the method speak.</p>
+          <div class="chips"><span>Bold</span><span>Rooted</span><span>Immersive</span><span>Memorable</span></div>
+        </div>
+        <div class="specimen">
+          <div class="swatches">
+            <div style="background:#13100D;color:#F2ECE3"><code>#13100D</code></div>
+            <div style="background:#1D1915;color:#F2ECE3"><code>#1D1915</code></div>
+            <div style="background:#F2ECE3;color:#13100D"><code>#F2ECE3</code></div>
+            <div style="background:#B9AFA1;color:#13100D"><code>#B9AFA1</code></div>
+            <div style="background:#F27B2E;color:#13100D"><code>#F27B2E</code></div>
+            <div style="background:#8CC6AE;color:#13100D"><code>#8CC6AE</code></div>
+          </div>
+          <div class="typo">
+            <span class="aa" style="font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800">AA</span>
+            <span class="aa" style="font-family:'IBM Plex Mono',monospace;font-size:30px">6.15pm</span>
+            <div class="names"><strong>Archivo Expanded</strong><span>display · Archivo text · Plex Mono times</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="dir-body">
+        <div class="notes">
+          <div><h3>Why</h3><p>Few yoga centres anywhere can say their founder opened the doors. C makes that lineage the first thing people feel, then turns it towards today’s classes.</p></div>
+          <div><h3>Signature: hold the pose</h3><p>A pinned scene beside a photograph of Mr Iyengar. As you scroll, a minute is counted and the text moves through arrive, stay, support and attend: the experience of holding a pose for longer.</p></div>
+          <div><h3>Booking</h3><p>A dark agenda with large times, workshops that travel sideways as you scroll, and a bright saffron “Start here” for tasters and the beginners course.</p></div>
+          <div><h3>Best if</h3><p>You want to stand apart from every other studio in London, and to carry the history of the Institute forward.</p></div>
+        </div>
+        <div class="preview" data-dir="c"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Side by side</h2>
+        <p>All three cover the same content, work on phones, meet WCAG AA contrast and keep still for anyone who prefers reduced motion.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th scope="col">A · Alignment</th><th scope="col">B · Practice</th><th scope="col">C · Lineage</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Feels like</th><td>A beautifully printed programme</td><td>A calm, well-made app</td><td>A film about the Institute</td></tr>
+            <tr><th scope="row">Hero</th><td>Title page beside the studio</td><td>Level selector and up-next card</td><td>1984 dissolving into today</td></tr>
+            <tr><th scope="row">Timetable</th><td>Printed week, serif times</td><td>Day strip, cards, sticky filters</td><td>Dark agenda, mono times</td></tr>
+            <tr><th scope="row">Workshops</th><td>Index with a picture that follows</td><td>Swipeable cards, level highlighted</td><td>A track that pans as you scroll</td></tr>
+            <tr><th scope="row">Scroll effects</th><td><span class="dots">●○○</span> gentle</td><td><span class="dots">●●○</span> moderate</td><td><span class="dots">●●●</span> rich</td></tr>
+            <tr><th scope="row">Photography needs</th><td>A few good studio photographs</td><td>Works with what you have</td><td>Archive and new class photography</td></tr>
+            <tr><th scope="row">Build effort</th><td><span class="dots">●○○</span> lowest</td><td><span class="dots">●●○</span> medium</td><td><span class="dots">●●○</span> medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="shared" id="research">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What shaped the booking patterns</h2>
+        <p>We looked at how well-regarded booking, fitness and studio products present a schedule and take a booking (via Mobbin and 21st.dev), and kept what felt calm enough for a yoga institute.</p>
+      </div>
+      <div class="grid4">
+        <div><span class="label">Fresha</span><p>A horizontal strip of dates, then times, with a summary bar that stays in reach.</p><span class="used">Day strip and sticky filters, B</span></div>
+        <div><span class="label">Equinox+</span><p>A week across the top and today’s classes underneath, one tap to add.</p><span class="used">Timetables, all three</span></div>
+        <div><span class="label">Open · Peloton</span><p>Class detail, a single “Book” action, then a clear confirmation with “Add to calendar”.</p><span class="used">The shared booking sheet</span></div>
+        <div><span class="label">ClassPass</span><p>Member and standard prices shown together, with the saving stated plainly.</p><span class="used">Prices toggle, B</span></div>
+        <div><span class="label">21st.dev drawer</span><p>A bottom sheet with a drag handle on phones, a side panel on desktop.</p><span class="used">The shared booking sheet</span></div>
+        <div><span class="label">21st.dev stacking cards</span><p>Cards that pin and settle back as the next one slides over.</p><span class="used">Four ways to practise, B</span></div>
+        <div><span class="label">21st.dev booking calendar</span><p>A week strip feeding a list of slots, built for thumbs.</p><span class="used">Timetables, all three</span></div>
+        <div><span class="label">Editorial print</span><p>Chapters, rules and running folios from printed programmes and journals such as your own Dipika.</p><span class="used">Direction A</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shared" id="shared">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Shared by all three</h2>
+        <p>These decisions hold whichever direction you prefer.</p>
+      </div>
+      <div class="shared-grid">
+        <div><h3>Your content, your photographs</h3><p>Every word, price and date comes from your current site and booking system; every photograph is yours. No stock imagery.</p></div>
+        <div><h3>Levels everywhere</h3><p>Beginners, General and Intermediate appear on every class and workshop, with the experience each one asks for, so nobody books the wrong class.</p></div>
+        <div><h3>Fast and private</h3><p>Fonts and images are served from the site itself. No tracking and no third-party scripts or fonts on these pages.</p></div>
+        <div><h3>Accessible</h3><p>AA contrast throughout, keyboard-friendly tabs and booking, and every scroll effect switches off for people who prefer reduced motion.</p></div>
+        <div><h3>Teacher training, accurately</h3><p>We describe the Iyengar Yoga (UK) pathway and your teachers’ mentoring as it is, and point people to IYUK for formal training.</p></div>
+        <div><h3>Built for your team</h3><p>Built on a CMS your staff can edit, with the timetable and workshops drawn straight from your booking system, so nothing is typed in twice.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next" id="next">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Next steps</h2>
+        <p>One direction can be taken as it is, or combined: A’s editorial pages with B’s level selector, for example.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>A conversation</h3><p>Thirty minutes to hear what matters to your teachers, staff and members, and which direction feels most like the Institute.</p></li>
+        <li><span class="n">2</span><h3>One direction, refined</h3><p>We develop the chosen direction with your feedback and design the class, workshop and teacher pages.</p></li>
+        <li><span class="n">3</span><h3>Build and hand over</h3><p>Connected to your booking system, tested with real students, and handed over with training for the team.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Design directions for Iyengar Yoga London, a registered charity (no. 1092322)</span>
+    <span>Mindful Design · October 2026 · <a href="https://mindfuldesign.me">mindfuldesign.me</a></span>
+  </div>
+</footer>
+<script>
+(function () {
+  const DESK = 1440, PHONE = 390;
+  document.querySelectorAll('.preview').forEach((el) => {
+    const dir = el.dataset.dir;
+    let device = 'desktop';
+    el.innerHTML = `
+      <div class="pv-tools">
+        <div class="seg" role="group" aria-label="Device"><button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="mobile" aria-pressed="false">Phone</button></div>
+        <a class="open-link" href="${dir}/home.html" target="_blank" rel="noopener">Open full page ↗</a>
+      </div>
+      <div class="frame"><div class="chrome"><i></i><i></i><i></i><span>iyengaryogalondon.co.uk</span></div><div class="viewport"><iframe title="Direction ${dir.toUpperCase()} homepage preview" loading="lazy" src="${dir}/home.html"></iframe></div></div>
+      <p class="pv-hint">Scroll inside the frame. Links, filters and booking all work.</p>`;
+    const frame = el.querySelector('.frame'), vp = el.querySelector('.viewport'), iframe = el.querySelector('iframe');
+    function fit() {
+      const w = vp.clientWidth, base = device === 'desktop' ? DESK : PHONE, s = w / base;
+      const h = device === 'desktop' ? Math.min(820, Math.round(w * 0.66)) : Math.round(w * 2.05);
+      iframe.style.width = base + 'px';
+      iframe.style.height = Math.round(h / s) + 'px';
+      iframe.style.transform = `scale(${s})`;
+      vp.style.height = h + 'px';
+    }
+    el.querySelectorAll('[data-device]').forEach((b) => b.addEventListener('click', () => {
+      device = b.dataset.device;
+      el.querySelectorAll('[data-device]').forEach((x) => x.setAttribute('aria-pressed', x === b));
+      frame.classList.toggle('mobile', device === 'mobile');
+      fit();
+    }));
+    new ResizeObserver(fit).observe(vp);
+    fit();
+  });
+})();
+</script>
+</body>
+</html>
