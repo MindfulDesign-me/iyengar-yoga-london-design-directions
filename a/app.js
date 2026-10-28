@@ -7,7 +7,7 @@
   /* Today, in one running line under the title page */
   const nowList = sessions.filter((s) => s.date === today);
   const next = nowList.find((s) => s.start >= '18:00' && s.kind === 'class') || nowList[nowList.length - 1];
-  $('#today-line').innerHTML = `<b>Today, ${fmt.long(today)}</b><span class="sep">·</span><span>${nowList.length} classes, from ${fmt.time(nowList[0].start)} to ${fmt.time(nowList[nowList.length - 1].start)}</span><span class="sep">·</span><span>Tonight: ${esc(next.title)} with ${esc(next.teacher)}, ${fmt.time(next.start)}</span><button type="button" class="link-btn" data-book="${next.id}">Book this class</button>`;
+  $('#today-line').innerHTML = `<b>Today, ${fmt.long(today)}</b><span class="sep" aria-hidden="true">·</span><span>${nowList.length} classes, from ${fmt.time(nowList[0].start)} to ${fmt.time(nowList[nowList.length - 1].start)}</span><span class="sep" aria-hidden="true">·</span><span>Tonight: ${esc(next.title)} with ${esc(next.teacher)}, ${fmt.time(next.start)}</span><button type="button" class="link-btn" data-book="${next.id}">Book this class</button>`;
 
   /* Timetable */
   const state = { day: today, where: 'all', level: 'all' };
